@@ -4,4 +4,10 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #1a1b1f;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

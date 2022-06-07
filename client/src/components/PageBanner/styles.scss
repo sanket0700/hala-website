@@ -1,0 +1,43 @@
+.page-banner-container {
+  background-color: #000;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.page-banner-header {
+  font-size: 4rem;
+  line-height: 5rem;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .page-banner-header {
+    font-size: 3.5rem;
+    line-height: 4.375rem;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .page-banner-header {
+    font-size: 3.125rem;
+    line-height: 4rem;
+  }
+
+}
+
+
+@media screen and (max-width: 479px) {
+
+  .page-banner-header {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+
+}
