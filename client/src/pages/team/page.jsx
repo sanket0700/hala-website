@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { PageBanner } from '../../components/PageBanner';
 
 function Team() {
   return (
     <div className='Team'>
-      Team Page
+      <PageBanner 
+        heading="Team"
+      />
     </div>
   )
 }

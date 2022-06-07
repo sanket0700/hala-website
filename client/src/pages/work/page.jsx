@@ -1,9 +1,12 @@
 import React from 'react'
+import { PageBanner } from '../../components/PageBanner';
 
 function Work() {
   return (
     <div className='Work'>
-      Work Page
+      <PageBanner 
+        heading="Our Work"
+      />
     </div>
   )
 }

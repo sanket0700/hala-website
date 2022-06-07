@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { PageBanner } from '../../components/PageBanner';
 
 function Contact() {
   return (
     <div className='Contact'>
-      Contact Page
+      <PageBanner 
+        heading="Contact Us"
+      />
     </div>
   )
 }
