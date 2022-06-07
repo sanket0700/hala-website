@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 
@@ -74,6 +74,13 @@ function NavBar() {
       setCollapsed(true);
     }
   };
+
+
+  useEffect(() => {
+    const currentPage = window.location.pathname.substring(1);
+    setCurrentActive(currentPage);
+  }, [ currentActive ]);
+
 
   mediaMatch.addEventListener("change", handler);
 
