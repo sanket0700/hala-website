@@ -82,6 +82,8 @@ function NavBar() {
       setCurrentActive(linkTag);
       navigate("/"+linkTag);
     }
+
+    setCollapsed(true);
   }
 
   const handleHover = (linkTag) => {
