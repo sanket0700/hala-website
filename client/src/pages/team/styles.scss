@@ -1,0 +1,27 @@
+.team-members-grid {
+  margin: 0 auto;
+  max-width: 71.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.875rem;
+  column-gap: 1.875rem;
+  margin-bottom: 3.75rem;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .team-members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media screen and (max-width: 479px) {
+
+  .team-members-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

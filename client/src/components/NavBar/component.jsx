@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 
@@ -6,6 +6,7 @@ import NavLogo from '../../assets/navLogo.png';
 import NavMenu from '../../assets/navMenu.png';
 
 import './styles.scss';
+
 
 const buttonStyle = {
   padding: "0.75rem 1.563rem",
@@ -59,30 +60,23 @@ const navbarLinkHoverOpacity = 0.9;
 const navbarLinkActiveOpacity = 1.0;
 
 
-function NavBar() {
+function NavBar({ currentActive, setCurrentActive }) {
 
   let navigate = useNavigate();
 
   const mediaMatch = window.matchMedia('(min-width: 991px)');
 
-  const [ currentActive, setCurrentActive ] = useState("");
   const [ hoverTag, setHoverTag ] = useState("");
   const [ collapsed, setCollapsed ] = useState(true);
 
-  const handler = (e) => {
+  const screenSizeChangeHandler = (e) => {
     if(e.matches) {
       setCollapsed(true);
     }
   };
 
 
-  useEffect(() => {
-    const currentPage = window.location.pathname.substring(1);
-    setCurrentActive(currentPage);
-  }, [ currentActive ]);
-
-
-  mediaMatch.addEventListener("change", handler);
+  mediaMatch.addEventListener("change", screenSizeChangeHandler);
 
   const handleClick = (linkTag) => {
     if(currentActive!==linkTag) {
@@ -100,6 +94,11 @@ function NavBar() {
   const toggleNavCollapse = () => {
     setCollapsed(!collapsed);
   }
+
+  const contactUsClickHandler = () => {
+    document.location = "mailto:support@example.com";
+  }
+
 
   return (
     <div className='NavBar'>
@@ -161,6 +160,7 @@ function NavBar() {
             style={buttonStyle}
             backgroundColor={buttonBackgroundColor}
             hoverBackgroundColor={buttonHoverBackgroundColor}
+            clickHandler={contactUsClickHandler}
           />
         </div>
         <div className='navbar-links-collapse-menu-icon'>

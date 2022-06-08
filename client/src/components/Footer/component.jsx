@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 
 import './styles.scss';
@@ -17,7 +18,15 @@ const buttonStyle = {
 const buttonBackgroundColor = "#1a1b1f";
 const buttonHoverBackgroundColor = "#32343a";
 
-function Footer() {
+function Footer({ setCurrentActive }) {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    setCurrentActive("contact");
+    navigate("/contact");
+  }
+
   return (
     <div className='section Footer'>
       <div className='footer-container'>
@@ -35,6 +44,7 @@ function Footer() {
             style={buttonStyle}
             backgroundColor={buttonBackgroundColor}
             hoverBackgroundColor={buttonHoverBackgroundColor}
+            clickHandler={handleButtonClick}
           />
         </div>
       </div>

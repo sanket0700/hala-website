@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -11,10 +12,19 @@ import Team from './pages/team';
 import Work from './pages/work';
 
 function App() {
+
+  const [ currentActive, setCurrentActive ] = useState("");
+
+  useEffect(() => {
+    const currentPage = window.location.pathname.substring(1);
+    setCurrentActive(currentPage);
+    window.scroll({top: 0, behavior: "smooth"});
+  }, [ currentActive ]);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
+        <NavBar currentActive={currentActive} setCurrentActive={setCurrentActive}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -22,7 +32,7 @@ function App() {
           <Route path='/team' element={<Team />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        <Footer />
+        <Footer setCurrentActive={setCurrentActive}/>
       </BrowserRouter>
     </div>
   );
