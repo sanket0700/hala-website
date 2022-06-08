@@ -1,0 +1,55 @@
+.ProjectCard {
+  display: grid;
+}
+
+.project-card-container {
+  display: grid;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.project-card-element {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-card-thumbnail-container {
+  border: 1px solid;
+  width: fit-content;
+}
+
+.project-card-thumbnail-container:hover {
+  opacity: 0.8;
+}
+
+.project-card-thumbnail {
+  width: 100%;
+  max-width: 71.25rem;
+  cursor: pointer;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  line-height: 3.125rem;
+  transition: "opacity 200ms ease";
+  cursor: pointer;
+}
+
+.project-card-title:hover {
+  opacity: 0.8;
+  color: #32343a;
+}
+
+.project-card-category {
+  opacity: 0.6;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .project-card-title {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+}
