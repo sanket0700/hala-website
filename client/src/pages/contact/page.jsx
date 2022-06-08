@@ -3,7 +3,7 @@ import { PageBanner } from '../../components/PageBanner';
 
 function Contact() {
   return (
-    <div className='Contact'>
+    <div className='section Contact'>
       <PageBanner 
         heading="Contact Us"
       />

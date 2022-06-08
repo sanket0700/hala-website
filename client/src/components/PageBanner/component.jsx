@@ -3,7 +3,7 @@ import './styles.scss';
 
 function PageBanner(props) {
   return (
-    <div className='section PageBanner'>
+    <div className='PageBanner'>
       <div className='page-banner-container'>
         <div className='page-banner-header'>
           {props.heading}

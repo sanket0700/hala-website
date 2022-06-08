@@ -12,6 +12,7 @@ function Button(props) {
         style={{...props.style, backgroundColor: (hover ? props.hoverBackgroundColor : props.backgroundColor)}}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        onClick={props.clickHandler}
       >
         {props.text}
       </div>
