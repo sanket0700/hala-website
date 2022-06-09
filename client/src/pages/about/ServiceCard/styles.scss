@@ -1,0 +1,42 @@
+.service-thumbnail-container {
+  margin-bottom: 1.875rem;
+}
+
+.service-thumbnail {
+  width: 3.125rem;
+}
+
+.service-title {
+  margin-bottom: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+}
+
+.service-description {
+  opacity: 0.6;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .service-card-container {
+    display: grid;
+  }
+
+  .service-thumbnail-container {
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+  }
+  
+  .service-title {
+    margin: 0 auto;
+    margin-bottom: 0.625rem;
+  }
+  
+  .service-description {
+    opacity: 0.6;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
