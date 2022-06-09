@@ -1,0 +1,61 @@
+.about-us-header-container {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5.313rem;
+}
+
+.about-us-header {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+}
+
+.about-us-section-break {
+  margin: 0 auto;
+  height: 1px;
+  max-width: 71.25rem;
+  background-color: #eee;
+}
+
+.about-us-brief-description-container {
+  margin: 5rem auto;
+  width: 65%;
+  text-align: center;
+}
+
+.about-us-brief-description {
+  opacity: 0.6;
+}
+
+.about-us-services-container {
+  margin-top: 5rem;
+}
+
+.about-us-services-grid {
+  margin: 0 auto;
+  max-width: 71.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3.75rem;
+  column-gap: 5rem;
+  margin-bottom: 7.5rem;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .about-us-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .about-us-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
