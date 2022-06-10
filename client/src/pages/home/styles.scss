@@ -1,0 +1,118 @@
+.home-banner-container {
+  background-image: url("https://res.cloudinary.com/sanket0700/image/upload/v1654779468/5cdc00e3a4217f7862153ae2_portfolio_2_-_wide_ktq7m4.png");
+  width: 100%;
+  height: 38.75rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.25rem;
+}
+
+.home-banner-content-container {
+  display: grid;
+  width: 100%;
+}
+
+.home-banner-content {
+  margin: 0 auto;
+}
+
+.home-banner-header {
+  font-size: 4rem;
+  line-height: 5rem;
+  text-transform: none;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  width: 70%;
+}
+
+.home-banner-description {
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  opacity: 0.6;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2.188rem;
+  width: 70%;
+}
+
+.home-section-card-container {
+  background-color: #fff;
+  display: grid;
+  gap: 0.625rem;
+  margin: 0 auto;
+  max-width: 71.25rem;
+  margin-bottom: 5.313rem;
+}
+
+.home-section-card-content {
+  margin: 0 auto;
+}
+
+.home-section-card-heading {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-section-card-description {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+  font-weight: 400;
+  text-align: center;
+  width: 80%;
+}
+
+.home-section-break {
+  margin: 0 auto;
+  height: 1px;
+  max-width: 71.25rem;
+  background-color: #eee;
+}
+
+.home-brief-cards-grid {
+  margin-top: 5rem;
+  margin-bottom: 9.375rem;
+  display: grid;
+  row-gap: 5rem;
+}
+
+
+@media screen and (max-width: 991px) {
+  .home-banner-header {
+    font-size: 3.5rem;
+    line-height: 4.375rem;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .home-banner-header {
+    font-size: 3.125rem;
+    line-height: 4rem;
+  }
+
+  .home-banner-description {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .home-section-card-description {
+    font-size: 1.875rem;
+    line-height: 3.25rem;
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+  .home-banner-header {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+}

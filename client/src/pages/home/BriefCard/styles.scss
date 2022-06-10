@@ -1,0 +1,65 @@
+.BriefCard {
+  display: flex;
+  justify-content: center;
+}
+
+.brief-card-container {
+  max-width: 71.25rem;
+}
+
+.brief-card {
+  width: 100%;
+  display: grid;
+  column-gap: 5rem;
+  align-items: center;
+}
+
+.brief-card-image {
+  width: 100%;
+}
+
+.brief-card-type-one {
+  grid-template-columns: 1fr 2fr;
+}
+
+.brief-card-type-two {
+  grid-template-columns: 2fr 1fr;
+}
+
+.brief-card-category {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
+  margin-bottom: 0.625rem;
+}
+
+.brief-card-title {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.brief-card-description {
+  margin-bottom: 1.875rem;
+  opacity: 0.6;
+}
+
+
+@media screen and (max-width: 991px) {
+  .brief-card {
+    grid-template-columns: 1fr;
+    row-gap: 3.125rem;
+  }
+
+  .brief-card > * {
+    text-align: center;
+  }
+
+  .brief-card-text-container > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
