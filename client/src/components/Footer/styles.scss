@@ -50,7 +50,7 @@ $backgroundColor : #F4F4F4;
   }
 
   .footer-text {
-    width: 86%;
+    width: 90%;
   }
 }
 
@@ -63,8 +63,6 @@ $backgroundColor : #F4F4F4;
   .footer-container {
     display: grid;
     gap: 2.188rem;
-    padding-right: 1.875rem;
-    padding-left: 1.875rem;
   }
   
   .footer-text-header {
@@ -76,12 +74,15 @@ $backgroundColor : #F4F4F4;
     font-size: 1rem;
     line-height: 1.75rem;
   }
+
+  .footer-text {
+    width: 90%;
+  }
 }
 
 
 @media screen and (max-width: 479px) {
-  .footer-container {
-    padding-right: 0.938rem;
-    padding-left: 0.938rem;
+  .footer-text {
+    width: 90%;
   }
 }
