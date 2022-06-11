@@ -1,12 +1,14 @@
 .contact-us-card-container {
   margin-bottom: 6.25rem;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-us-card {
   max-width: 71.25rem;
   margin: 0 auto;
   display: grid;
+  justify-content: center;
   grid-template-columns: 2.5fr 1fr;
   column-gap: 5rem;
   row-gap: 3.125rem;
@@ -128,6 +130,11 @@
 
 
 @media screen and (max-width: 991px) {
+  .contact-us-card-container {
+    margin: 0 auto;
+    margin-bottom: 6.25rem;
+  }
+
   .contact-us-heading {
     text-align: center;
   }
@@ -141,7 +148,11 @@
   }
 
   .contact-us-card {
-    width: 80%;
     grid-template-columns: 1fr;
   }
+
+  .contact-us-form-container {
+    padding: 1.875rem;
+  }
+
 }
