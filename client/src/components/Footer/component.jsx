@@ -25,6 +25,7 @@ function Footer({ setCurrentActive }) {
   const handleButtonClick = () => {
     setCurrentActive("contact");
     navigate("/contact");
+    window.scroll({top: 0, behavior: "smooth"});
   }
 
   return (
