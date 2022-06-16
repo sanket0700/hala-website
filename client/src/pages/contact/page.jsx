@@ -29,6 +29,7 @@ function Contact() {
 
       await addDoc(collection(db, 'contactFormSubmissions'), formDataJSON);
       
+      document.location.reload();
       alert("Contact Form submitted successfully. Someone from our team will contact you shortly...")
     } catch(error) {
       console.log(error);
