@@ -1,13 +1,40 @@
 import React, { useState } from 'react';
 import { PageBanner } from '../../components/PageBanner';
 
+import { db } from '../../configs/firebase.config';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+
 import './styles.scss';
 
 function Contact() {
 
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
-  const [ message, setMessage ] = useState("")
+  const [ message, setMessage ] = useState("");
+
+
+  const submitForm = async(event) => {
+    event.preventDefault();
+    
+    try {
+      const formDataJSON = {
+        created: Timestamp.now()
+      };
+
+      const formData = new FormData(event.target);
+
+      formData.forEach((value, key) => {
+        formDataJSON[key] = value;
+      });
+
+      await addDoc(collection(db, 'contactFormSubmissions'), formDataJSON);
+      
+      alert("Contact Form submitted successfully. Someone from our team will contact you shortly...")
+    } catch(error) {
+      console.log(error);
+      alert("Oops, something went wrong!");
+    }
+  }
 
   return (
     <div className='section Contact'>
@@ -23,19 +50,19 @@ function Contact() {
             <div className='contact-us-description'>
               Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
             </div>
-            <form className='contact-us-form' autoComplete='on'>
+            <form className='contact-us-form' autoComplete='on' onSubmit={(e) => submitForm(e)}>
               <label className='contact-us-form-field'>
                 <div>
                   NAME
                 </div>
-                <input className='contact-us-text-field' type="text" name="name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
+                <input className='contact-us-text-field' type="text" name="name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} required/>
               </label>
 
               <label className='contact-us-form-field'>
                 <div>
                   EMAIL ADDRESS
                 </div>
-                <input className='contact-us-text-field' type="email" name="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input className='contact-us-text-field' type="email" name="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
               </label>
 
               <label className='contact-us-form-field'>
