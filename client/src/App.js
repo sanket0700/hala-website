@@ -4,6 +4,7 @@ import './App.css';
 
 import { Footer } from './components/Footer';
 import { NavBar } from './components/NavBar';
+import SiteFooter from './components/SiteFooter/component';
 
 import About from './pages/about';
 import Contact from './pages/contact';
@@ -32,7 +33,8 @@ function App() {
           <Route path='/team' element={<Team />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        <Footer setCurrentActive={setCurrentActive}/>
+        {currentActive==="team" ? <Footer setCurrentActive={setCurrentActive}/> : null}
+        <SiteFooter setCurrentActive={setCurrentActive}/>
       </BrowserRouter>
     </div>
   );
