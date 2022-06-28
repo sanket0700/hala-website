@@ -5,10 +5,13 @@
 .team-member-card-image-container {
   margin-bottom: 2.5rem;
   border: 1px solid;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .team-member-card-image {
-  width: 100%;
+  width: 22.375rem;
   height: 26.25rem;
 }
 

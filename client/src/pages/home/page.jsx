@@ -4,6 +4,8 @@ import Button from'../../components/Button';
 import { BriefCard } from './BriefCard';
 
 import briefCardData from './briefCardData.js';
+import ReviewCard from './ReviewCard/component';
+import reviewData from './reviewData';
 
 import './styles.scss';
 
@@ -21,6 +23,8 @@ const buttonStyle = {
 const buttonBackgroundColor = "#fff";
 const buttonHoverBackgroundColor = "#f1f1f1";
 
+const bannerVideoUrl = "https://res.cloudinary.com/sanket0700/video/upload/v1656333353/Home_Banner_Video_gve0qy.mp4";
+
 function Home(props) {
 
   const navigate = useNavigate();
@@ -34,12 +38,15 @@ function Home(props) {
     <div className='section Home'>
       <div className='home-container'>
         <div className='home-banner-container'>
+          <video id='home-banner-video' muted autoPlay loop>
+              <source src={bannerVideoUrl}/>
+          </video>
           <div className="home-banner-content-container">
             <div className='home-banner-content home-banner-header'>
-              Grow your Business.
+              Imagine and Design
             </div>
             <div className='home-banner-content home-banner-description'>
-              Give your business a boost with a beautifully crafted homepage.
+              Just like how HALA glorifies the beauty of moon, our service will surely elevate your business!
             </div>
             <div className='home-banner-content home-banner-button'>
               <Button
@@ -76,6 +83,27 @@ function Home(props) {
               )
             })
           }
+        </div>
+
+        <div className='home-section-card-container home-review-section-card-container'>
+          <div className='home-section-card-content home-section-card-heading'>
+            ABOUT US
+          </div>
+          <div className='home-section-card-content home-section-card-description'>
+            Our Clients
+          </div>
+        </div>
+        
+        <div className='home-review-section'>
+          <div className='home-review-section-container'>
+            {
+              reviewData.map((data,index) => {
+                return (
+                  <ReviewCard key={index} {...data}/>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </div>

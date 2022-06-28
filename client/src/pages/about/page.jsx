@@ -12,6 +12,7 @@ function About() {
     <div className='section About'>
       <PageBanner 
         heading="About Us"
+        videoUrl="https://res.cloudinary.com/sanket0700/video/upload/v1656333311/About_Banner_Video_tzcm87.mp4"
       />
 
       <div className='about-us-header-container'>

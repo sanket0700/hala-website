@@ -12,6 +12,7 @@ function Team() {
     <div className='section Team'>
       <PageBanner 
         heading="Team"
+        videoUrl="https://res.cloudinary.com/sanket0700/video/upload/v1656316700/Team_Banner_Video_n0tl8f.mp4"
       />
       <SectionCard
         heading="OUR PEOPLE"

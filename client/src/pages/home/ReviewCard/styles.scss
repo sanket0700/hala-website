@@ -1,0 +1,117 @@
+.ReviewCard {
+  padding-bottom: 1.875rem;
+}
+
+.review-card-company-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-card-company-logo {
+  width: 14rem;
+}
+
+.review-card-company-name {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.375rem;
+  font-weight: 500;
+  margin-bottom: 0.65rem;
+}
+
+.review-card-service-name {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  line-height: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.review-card-rating {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.review-card-comment {
+  width: 100%;
+  max-width: 40rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+
+:root {
+  --star-size: 1.75rem;
+  --star-color: #e2e2e2;
+  --star-background: #0049AF;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+  
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReviewCard {
+    padding-bottom: 1.875rem;
+  }
+  
+  .review-card-company-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .review-card-company-logo {
+    width: 11rem;
+  }
+  
+  .review-card-company-name {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.65rem;
+  }
+  
+  .review-card-service-name {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.625rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  
+  .review-card-rating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+  }
+  
+  
+  :root {
+    --star-size: 1.375rem;
+  }
+}

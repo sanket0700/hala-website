@@ -37,10 +37,17 @@ function Contact() {
     }
   }
 
+
+  const emailClickHandler = () => {
+    document.location = "mailto:contact@halacreativestudio.com";
+  }
+
+
   return (
     <div className='section Contact'>
       <PageBanner 
         heading="Contact Us"
+        videoUrl="https://res.cloudinary.com/sanket0700/video/upload/v1656333333/Contact_Banner_Video_wmt5j3.mp4"
       />
       <div className='contact-us-card-container'>
         <div className='contact-us-card'>
@@ -82,11 +89,11 @@ function Contact() {
                   CONTACT
                 </div>
                 <div className='contact-variable-content'>
-                  <div className='contact-variable-content-email'>
-                    contact@business.com
+                  <div className='contact-variable-content-email' onClick={emailClickHandler}>
+                    contact@halacreativestudio.com
                   </div>
                   <div className='contact-variable-content-number'>
-                    01 (650) 658 6822
+                    +91 788 706 1880
                   </div>
                 </div>
               </div>

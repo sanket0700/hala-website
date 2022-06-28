@@ -13,6 +13,8 @@
 .navbar-logo {
   cursor: pointer;
   transition: "opactiy 200ms ease";
+  display: flex;
+  align-items: center;
 }
 
 .navbar-logo-img {
@@ -65,7 +67,8 @@
   }
 
   .navbar-links-collapse-menu-icon {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 
   .navbar-links-collapse-menu-container {

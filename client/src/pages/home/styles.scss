@@ -1,5 +1,5 @@
 .home-banner-container {
-  background-image: url("https://res.cloudinary.com/sanket0700/image/upload/v1654779468/5cdc00e3a4217f7862153ae2_portfolio_2_-_wide_ktq7m4.png");
+  // background-image: url("https://res.cloudinary.com/sanket0700/image/upload/v1654779468/5cdc00e3a4217f7862153ae2_portfolio_2_-_wide_ktq7m4.png");
   width: 100%;
   height: 38.75rem;
   overflow: hidden;
@@ -9,9 +9,16 @@
   margin-bottom: 6.25rem;
 }
 
+#home-banner-video {
+  object-fit: cover;
+  min-width: 100%;
+  height: 38.75rem;
+}
+
 .home-banner-content-container {
   display: grid;
   width: 100%;
+  position: absolute;
 }
 
 .home-banner-content {
@@ -80,9 +87,27 @@
 
 .home-brief-cards-grid {
   margin-top: 5rem;
-  margin-bottom: 9.375rem;
+  margin-bottom: 7.5rem;
   display: grid;
   row-gap: 5rem;
+}
+
+.home-review-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-review-section-card-container {
+  margin-bottom: 1.6rem;
+}
+
+.home-review-section-container {
+  display: grid;
+  gap: 2rem;
+  max-width: 71.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 7rem;
 }
 
 
@@ -90,6 +115,10 @@
   .home-banner-header {
     font-size: 3.5rem;
     line-height: 4.375rem;
+  }
+
+  .home-review-section-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -108,6 +137,10 @@
   .home-section-card-description {
     font-size: 1.875rem;
     line-height: 3.25rem;
+  }
+
+  .home-review-section-card-container {
+    margin-bottom: 0.6rem;
   }
 }
 

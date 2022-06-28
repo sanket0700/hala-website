@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 
-import NavLogo from '../../assets/navLogo.png';
+// import NavLogo from '../../assets/navLogo.png';
 import NavMenu from '../../assets/navMenu.png';
 
 import './styles.scss';
@@ -96,7 +96,7 @@ function NavBar({ currentActive, setCurrentActive }) {
   }
 
   const contactUsClickHandler = () => {
-    document.location = "mailto:support@example.com";
+    // document.location = "mailto:support@example.com";
   }
 
 
@@ -104,10 +104,21 @@ function NavBar({ currentActive, setCurrentActive }) {
     <div className='NavBar'>
       <div className='navbar-container'>
         <div className='navbar-logo' onClick={() => handleClick("")}>
-          <img className='navbar-logo-img' src={NavLogo} alt="Business" />
+          <img className='navbar-logo-img' src="https://res.cloudinary.com/sanket0700/image/upload/v1656390648/Header_logo_tqg02k.png" alt="Business" />
         </div>
         <div className='navbar-all-links'>
           <div className='navbar-all-links-container'>
+            <div className='navbar-link'
+              onClick={() => handleClick("")}
+              onMouseEnter={() => handleHover("")}
+              onMouseLeave={() => handleHover("")}
+              style={{ ...navbarLinkStyle, 
+                opacity: (currentActive==="" ? navbarLinkActiveOpacity : (hoverTag==="" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
+                color: (currentActive==="" ? navbarLinkActiveColor : (hoverTag==="" ? navbarLinkHoverColor : navbarLinkColor)),
+                fontWeight: (currentActive==="" ? navbarLinkActiveWeight : navbarLinkWeight) }}
+            >
+              HOME
+            </div>
             <div className='navbar-link'
               onClick={() => handleClick("about")}
               onMouseEnter={() => handleHover("about")}
@@ -119,7 +130,7 @@ function NavBar({ currentActive, setCurrentActive }) {
             >
               ABOUT
             </div>  
-            <div className='navbar-link'
+            {/* <div className='navbar-link'
               onClick={() => handleClick("work")}
               onMouseEnter={() => handleHover("work")}
               onMouseLeave={() => handleHover("")}
@@ -129,7 +140,7 @@ function NavBar({ currentActive, setCurrentActive }) {
                 fontWeight: (currentActive==="work" ? navbarLinkActiveWeight : navbarLinkWeight) }}
             >
               WORK
-            </div>
+            </div> */}
             <div className='navbar-link'
               onClick={() => handleClick("team")}
               onMouseEnter={() => handleHover("team")}
@@ -156,7 +167,7 @@ function NavBar({ currentActive, setCurrentActive }) {
         </div>
         <div className='navbar-contact-us-button'>
           <Button
-            text="CONTACT US"
+            text="OUR WORK"
             style={buttonStyle}
             backgroundColor={buttonBackgroundColor}
             hoverBackgroundColor={buttonHoverBackgroundColor}
@@ -177,6 +188,17 @@ function NavBar({ currentActive, setCurrentActive }) {
       >
         <div className='navbar-links-collapse-menu'>
           <div className='navbar-collapse-link'
+            onClick={() => handleClick("")}
+            onMouseEnter={() => handleHover("")}
+            onMouseLeave={() => handleHover("")}
+            style={{ ...collapseNavbarLinkStyle, 
+                      opacity: (currentActive==="" ? navbarLinkActiveOpacity : (hoverTag==="" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
+                      color: (currentActive==="" ? navbarLinkActiveColor : (hoverTag==="" ? navbarLinkHoverColor : navbarLinkColor)),
+                      fontWeight: (currentActive==="" ? navbarLinkActiveWeight : navbarLinkWeight) }}
+          >
+            HOME
+          </div>
+          <div className='navbar-collapse-link'
             onClick={() => handleClick("about")}
             onMouseEnter={() => handleHover("about")}
             onMouseLeave={() => handleHover("")}
@@ -188,8 +210,8 @@ function NavBar({ currentActive, setCurrentActive }) {
             ABOUT
           </div>  
           <div className='navbar-collapse-link'
-            onClick={() => handleClick("work")}
-            onMouseEnter={() => handleHover("work")}
+            onClick={() => handleClick("")}
+            onMouseEnter={() => handleHover("")}
             onMouseLeave={() => handleHover("")}
             style={{ ...collapseNavbarLinkStyle, 
               opacity: (currentActive==="work" ? navbarLinkActiveOpacity : (hoverTag==="work" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
