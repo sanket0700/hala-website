@@ -37,6 +37,9 @@ function Contact() {
     }
   }
 
+  const numberClickHandler = () => {
+    document.location = "tel:+375292771265";
+  }
 
   const emailClickHandler = () => {
     document.location = "mailto:contact@halacreativestudio.com";
@@ -56,7 +59,7 @@ function Contact() {
               Contact us
             </div>
             <div className='contact-us-description'>
-              Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+              Looking to collaborate or want to design?<br />Get in touch to find out how we can help.
             </div>
             <form className='contact-us-form' autoComplete='on' onSubmit={(e) => submitForm(e)}>
               <label className='contact-us-form-field'>
@@ -89,11 +92,11 @@ function Contact() {
                   CONTACT
                 </div>
                 <div className='contact-variable-content'>
-                  <div className='contact-variable-content-email' onClick={emailClickHandler}>
-                    contact@halacreativestudio.com
+                  <div className='contact-variable-content-number' onClick={numberClickHandler}>
+                    <img className='contact-variable-content-icon' src="https://res.cloudinary.com/sanket0700/image/upload/v1656481296/contact_kvjr2h.png" alt="Contact Number : " />+91 788 706 1880
                   </div>
-                  <div className='contact-variable-content-number'>
-                    +91 788 706 1880
+                  <div className='contact-variable-content-email' onClick={emailClickHandler}>
+                    <img className='contact-variable-content-icon' src="https://res.cloudinary.com/sanket0700/image/upload/v1656481296/mail_uhzkgi.png" alt="Email : " />contact@halacreativestudio.com
                   </div>
                 </div>
               </div>

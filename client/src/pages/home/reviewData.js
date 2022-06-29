@@ -15,7 +15,7 @@ const reviewData = [
   },
   {
     thumbnailUrl : "https://res.cloudinary.com/sanket0700/image/upload/v1656401164/3_wizcvp.png",
-    companyName : "N-17",
+    companyName : "N17 Design Studio",
     serviceName : "Documentation of Work",
     rating : "4",
     comment : "Working with Hala has been so easy and comfortable. Being an Architect, I realize the need to fulfill the client's requirements. To my surprise,  coordination and work ethics are marvelous in your company."

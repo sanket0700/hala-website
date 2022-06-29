@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const currentPage = window.location.pathname.substring(1);
-    setCurrentActive(currentPage);
+    currentPage==="" ? setCurrentActive("home") : setCurrentActive(currentPage);
     window.scroll({top: 0, behavior: "smooth"});
   }, [ currentActive ]);
 

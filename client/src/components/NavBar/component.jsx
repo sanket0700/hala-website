@@ -80,7 +80,7 @@ function NavBar({ currentActive, setCurrentActive }) {
 
   const handleClick = (linkTag) => {
     if(currentActive!==linkTag) {
-      setCurrentActive(linkTag);
+      linkTag==="" ? setCurrentActive("home") : setCurrentActive(linkTag);
       navigate("/"+linkTag);
     }
 
@@ -95,8 +95,8 @@ function NavBar({ currentActive, setCurrentActive }) {
     setCollapsed(!collapsed);
   }
 
-  const contactUsClickHandler = () => {
-    // document.location = "mailto:support@example.com";
+  const ourWorkClickHandler = () => {
+    window.open("https://www.behance.net/halacreative", "_blank")
   }
 
 
@@ -110,12 +110,12 @@ function NavBar({ currentActive, setCurrentActive }) {
           <div className='navbar-all-links-container'>
             <div className='navbar-link'
               onClick={() => handleClick("")}
-              onMouseEnter={() => handleHover("")}
+              onMouseEnter={() => handleHover("home")}
               onMouseLeave={() => handleHover("")}
               style={{ ...navbarLinkStyle, 
-                opacity: (currentActive==="" ? navbarLinkActiveOpacity : (hoverTag==="" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
-                color: (currentActive==="" ? navbarLinkActiveColor : (hoverTag==="" ? navbarLinkHoverColor : navbarLinkColor)),
-                fontWeight: (currentActive==="" ? navbarLinkActiveWeight : navbarLinkWeight) }}
+                opacity: (currentActive==="home" ? navbarLinkActiveOpacity : (hoverTag==="home" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
+                color: (currentActive==="home" ? navbarLinkActiveColor : (hoverTag==="home" ? navbarLinkHoverColor : navbarLinkColor)),
+                fontWeight: (currentActive==="home" ? navbarLinkActiveWeight : navbarLinkWeight) }}
             >
               HOME
             </div>
@@ -171,7 +171,7 @@ function NavBar({ currentActive, setCurrentActive }) {
             style={buttonStyle}
             backgroundColor={buttonBackgroundColor}
             hoverBackgroundColor={buttonHoverBackgroundColor}
-            clickHandler={contactUsClickHandler}
+            clickHandler={ourWorkClickHandler}
           />
         </div>
         <div className='navbar-links-collapse-menu-icon'>
@@ -189,12 +189,12 @@ function NavBar({ currentActive, setCurrentActive }) {
         <div className='navbar-links-collapse-menu'>
           <div className='navbar-collapse-link'
             onClick={() => handleClick("")}
-            onMouseEnter={() => handleHover("")}
-            onMouseLeave={() => handleHover("")}
+            onMouseEnter={() => handleHover("home")}
+            onMouseLeave={() => handleHover("home")}
             style={{ ...collapseNavbarLinkStyle, 
-                      opacity: (currentActive==="" ? navbarLinkActiveOpacity : (hoverTag==="" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
-                      color: (currentActive==="" ? navbarLinkActiveColor : (hoverTag==="" ? navbarLinkHoverColor : navbarLinkColor)),
-                      fontWeight: (currentActive==="" ? navbarLinkActiveWeight : navbarLinkWeight) }}
+                      opacity: (currentActive==="home" ? navbarLinkActiveOpacity : (hoverTag==="home" ? navbarLinkHoverOpacity : navbarLinkOpacity)),
+                      color: (currentActive==="home" ? navbarLinkActiveColor : (hoverTag==="home" ? navbarLinkHoverColor : navbarLinkColor)),
+                      fontWeight: (currentActive==="home" ? navbarLinkActiveWeight : navbarLinkWeight) }}
           >
             HOME
           </div>
@@ -210,8 +210,8 @@ function NavBar({ currentActive, setCurrentActive }) {
             ABOUT
           </div>  
           <div className='navbar-collapse-link'
-            onClick={() => handleClick("")}
-            onMouseEnter={() => handleHover("")}
+            onClick={ourWorkClickHandler}
+            onMouseEnter={() => handleHover("work")}
             onMouseLeave={() => handleHover("")}
             style={{ ...collapseNavbarLinkStyle, 
               opacity: (currentActive==="work" ? navbarLinkActiveOpacity : (hoverTag==="work" ? navbarLinkHoverOpacity : navbarLinkOpacity)),

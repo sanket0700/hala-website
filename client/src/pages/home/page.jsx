@@ -46,7 +46,7 @@ function Home(props) {
               Imagine and Design
             </div>
             <div className='home-banner-content home-banner-description'>
-              Just like how HALA glorifies the beauty of moon, our service will surely elevate your business!
+              Just like how HALA glorifies the beauty of moon, our service will surely elevate your business.
             </div>
             <div className='home-banner-content home-banner-button'>
               <Button
@@ -85,10 +85,9 @@ function Home(props) {
           }
         </div>
 
+        <div className='home-section-break'></div>
+
         <div className='home-section-card-container home-review-section-card-container'>
-          <div className='home-section-card-content home-section-card-heading'>
-            ABOUT US
-          </div>
           <div className='home-section-card-content home-section-card-description'>
             Our Clients
           </div>

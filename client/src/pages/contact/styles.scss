@@ -115,18 +115,35 @@
   margin-bottom: 0.625rem;
   font-size: 0.75rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.063rem;
   text-transform: uppercase;
 }
 
 .contact-variable-content {
   opacity: 0.6;
+  margin: 0 auto;
 }
 
 .contact-variable-content-email {
   text-decoration: underline;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+
+.contact-variable-content-number {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+
+.contact-variable-content-icon {
+  width: 2.4rem;
+  opacity: 1;
+  padding-right: 0.4rem;
 }
 
 
@@ -154,6 +171,14 @@
 
   .contact-us-form-container {
     padding: 1.875rem;
+  }
+
+  .contact-variable-content-email {
+    justify-content: center;
+  }
+  
+  .contact-variable-content-number {
+    justify-content: center;
   }
 
 }
