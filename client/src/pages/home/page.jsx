@@ -38,7 +38,7 @@ function Home(props) {
     <div className='section Home'>
       <div className='home-container'>
         <div className='home-banner-container'>
-          <video id='home-banner-video' muted autoPlay loop>
+          <video id='home-banner-video' muted autoPlay loop disablePictureInPicture>
               <source src={bannerVideoUrl}/>
           </video>
           <div className="home-banner-content-container">

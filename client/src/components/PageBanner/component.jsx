@@ -6,7 +6,7 @@ function PageBanner(props) {
   return (
     <div className='PageBanner'>
       <div className='page-banner-container'>
-        <video id='page-banner-video' muted autoPlay loop>
+        <video id='page-banner-video' muted autoPlay loop disablePictureInPicture>
             <source src={props.videoUrl}/>
         </video>
         <div className='page-banner-header'>
