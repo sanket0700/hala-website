@@ -1,8 +1,12 @@
 .team-members-grid {
   margin: 0 auto;
   max-width: 71.25rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  justify-content: center;
+  // grid-template-columns: repeat(auto, 1fr);
   row-gap: 1.875rem;
   column-gap: 1.875rem;
   margin-bottom: 3.75rem;

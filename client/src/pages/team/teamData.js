@@ -24,11 +24,11 @@ const teamData = [
     role: "Recruiter",
     imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316251/Ankush_rf0oiv.jpg"
   },
-  {
-    name: "Er. Sanket Jain",
-    role: "Technical Head",
-    imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316252/Sanket_zuk6fm.jpg"
-  }
+  // {
+  //   name: "Er. Sanket Jain",
+  //   role: "Technical Head",
+  //   imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316252/Sanket_zuk6fm.jpg"
+  // }
 ];
 
 export default teamData;
