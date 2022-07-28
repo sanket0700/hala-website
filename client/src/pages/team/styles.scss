@@ -1,12 +1,12 @@
 .team-members-grid {
   margin: 0 auto;
   max-width: 71.25rem;
-  // display: grid;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 2;
-  justify-content: center;
-  // grid-template-columns: repeat(auto, 1fr);
+  display: grid;
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-grow: 2;
+//   justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
   row-gap: 1.875rem;
   column-gap: 1.875rem;
   margin-bottom: 3.75rem;
@@ -25,8 +25,8 @@
 @media screen and (max-width: 479px) {
 
   .team-members-grid {
-//     grid-template-columns: 1fr;
-    flex-grow: 1;
+    grid-template-columns: 1fr;
+//     flex-grow: 1;
   }
 
 }
