@@ -38,7 +38,7 @@ function Home(props) {
     <div className='section Home'>
       <div className='home-container'>
         <div className='home-banner-container' onContextMenu={(e) => e.preventDefault()}>
-          <video id='home-banner-video' muted autoPlay loop disablePictureInPicture>
+          <video id='home-banner-video' muted autoPlay loop disablePictureInPicture playsInline>
               <source src={bannerVideoUrl}/>
           </video>
           <div className="home-banner-content-container">
