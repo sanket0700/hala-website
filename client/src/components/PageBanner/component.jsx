@@ -6,7 +6,7 @@ function PageBanner(props) {
   return (
     <div className='PageBanner'>
       <div className='page-banner-container' onContextMenu={(e) => e.preventDefault()}>
-        <video id='page-banner-video' muted autoPlay loop disablePictureInPicture playsInLine>
+        <video id='page-banner-video' muted autoPlay loop disablePictureInPicture playsInline>
             <source src={props.videoUrl}/>
         </video>
         <div className='page-banner-header'>
