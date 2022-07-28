@@ -9,11 +9,11 @@ const teamData = [
     role: "Managing Director",
     imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316252/Ananya_dj5fha.jpg"
   },
-  {
-    name: "Ar. Mayank Singh",
-    role: "Creative Head",
-    imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316252/Mayank_hsdsuc.jpg"
-  },
+//   {
+//     name: "Ar. Mayank Singh",
+//     role: "Creative Head",
+//     imageUrl: "https://res.cloudinary.com/sanket0700/image/upload/v1656316252/Mayank_hsdsuc.jpg"
+//   },
   {
     name: "Ar. Hemant Verma",
     role: "Product Designer",
